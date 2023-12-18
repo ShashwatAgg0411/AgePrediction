@@ -141,10 +141,9 @@ prototxtPath = r"D:/OpenCv/age_deploy.prototxt"
 weightsPath = r"D:/OpenCv/age_net.caffemodel"
 agenet = cv.dnn.readNet(prototxtPath, weightsPath)
 
-print("[INFO] turning on camera...")
-video = cv.VideoCapture(0)
-# video=cv.VideoCapture(r"http://cdn.streamonweb.com/footprints/streamonweb_fp22_4/playlist.m3u8")
-# video=cv.VideoCapture(r"http://cdn.streamonweb.com/footprints/streamonweb_fp22_4/playlist.m3u8")
+# InputPath="/path/to/your/input/file"
+InputPath=0
+video = cv.VideoCapture(InputPath)
 
 if video.isOpened() is False:
     print("error")
